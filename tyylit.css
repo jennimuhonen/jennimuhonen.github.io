@@ -1,0 +1,480 @@
+/*Reunaviivat säätämisen avuksi
+
+img {       
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+} 
+
+p {       
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}*/
+
+/*HUOMIOT
+- muista poistaa kauheat taustavärit
+- muista siivota reunaviivatesti
+- muista siivota itseä varten tehdyt kommentit
+*/
+
+
+/*FONTIT JA KOKO SIVUN REUNAT*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, body {                                /*Poistamaan valkoiset reunat*/
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F9F4FA;
+}
+
+h1, h2 {
+    font-family: 'Raleway', sans-serif;
+}
+
+p, button, a {
+    font-family: 'Open Sans', sans-serif;
+}
+
+hr {
+    clear: both;
+    background-color: #5A3D7B;
+    border: none;
+    height: 3px;
+}
+
+/*BANNERI*/
+
+.banneri {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("taustakuva_mobiili.jpg"); /*linear-gradient tummensi taustakuvaa*/
+    background-color: #5A3D7B;
+    background-position: bottom;        /*koska haluan, että jos jotain näkyy, niin alaosa*/
+    background-size: cover;             /*ONKO TÄMÄ IDEAALI, TOIMIIKO? Näyttää kansikuvan kokonaan leveyssuunnassa*/
+    /* Resize the background image to cover the entire container 
+    background-repeat: no-repeat;
+    position: relative;     /* mitä tää tarkoittaa??? selvitä */
+
+}
+
+.banneri h1, h2 {
+    text-align: center;
+    color: #E5D3EB;
+}
+
+.banneri h1 {
+    font-size: 35px;
+    padding-top: 80px;
+    margin: 0;
+}
+
+.banneri h2 {
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 120px;
+    margin: 0;
+}
+
+
+/*NAVIGAATIO*/
+
+.navigaatio_hr {
+    margin: 0;
+}
+
+.button {
+    color: #5A3D7B;
+    background-color: #E5D3EB;
+    margin: 0;
+    display: flex;             /*Fiksaa pudotusvalikon tuottamat ongelmat*/
+    justify-content: center;  /*Keskittää buttonit, kun flex heitti ne reunaan*/
+    /*align-items: center;      ei tee mitään???*/
+}
+
+.button button {
+    border: none;
+    padding: 5px 13px;
+    /*text-align: center;                        Tämä ja kaksi alempaa ei tee mitään???
+    text-decoration: none;
+    display: inline-block;                    Tämän asettaa elementit vierekkäin ??? :) */
+    font-size: 16px;
+    margin: 8px 2px;
+    border-radius: 7px;            
+}
+
+.button button:hover {
+    border: 2px solid black;
+    margin: 6px 0px;                /*Jotta buttonit eivät liikkuisi hoveroidessa eli korjaa borderin tuomat muutokset*/
+}
+
+.taallaButton {
+    background-color: #5A3D7B;
+    color: #FFFFFF;                 
+}
+
+.toisaalleButton {
+    background-color: #BC97CA;
+    color: #000000;
+    cursor: pointer;
+}
+
+.toisaalleButton:hover {
+    background-color: #E5D3EB;
+}
+
+
+/*NAVIGAATIO -> PUDOTUSVALIKKO*/
+
+/*Valikon asettelu*/
+.pudotusvalikko {
+    position: relative;
+    display: inline-block;
+}
+
+/* Pudotusvalikko, yleensä piilossa, pöllitty verkosta */
+.pudotusvalikko_sisalto {
+    display: none;
+    position: absolute;
+    background-color: #F9F4FA;
+    min-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 3px;
+}
+
+/* Pudotusvalikon linkkien muotoilu */
+.pudotusvalikko_sisalto a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+  }
+
+/* Hoveroidessa pudotusvalikko tulee näkyviin */
+.pudotusvalikko:hover .pudotusvalikko_sisalto {
+    display: block;
+}
+
+.pudotusvalikko_sisalto a:hover {
+    font-weight: bold;
+    color: #5A3D7B;
+}
+
+
+/*SISÄLTÖ*/
+
+.sisalto {
+    width: 90%;
+    margin: auto;
+}
+
+.sisalto h2 {
+    color: #5A3D7B;
+    font-size: 25px;
+    margin: 35px 0 15px 0;
+}
+
+.sisalto img {
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+    border-radius: 30px; /*padding sotkee tän*/
+}
+
+.sisalto p {
+    /*max-width: 800px;*/
+    font-size: 18px;
+}
+
+.sisalto h2 {
+    text-align: left;
+}
+
+.sisalto a {
+    font-weight: bold;
+    color: #000000;
+}
+
+.sisalto a:hover{
+    background-color: #E5D3EB; 
+}
+
+.sisalto p:last-of-type {
+    margin-bottom: 40px;
+}
+
+/*SISÄLTÖ -> VERKKOSIVUT*/
+
+.verkkosivut {
+    outline: 3px solid black; 
+    outline-offset: -3px;
+}
+
+
+/*SISÄLTÖ -> PROJEKTIT*/
+
+.ylaprojekti {
+    clear: both;
+    width: 90%;
+    margin: auto;
+}
+
+.projektit {
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+}
+
+.projektit img {
+    width: 40%;
+    float: left;
+    margin: 0 20px 0 0;
+    outline: 2px solid black; 
+    outline-offset: -2px;
+    border-radius: 20px;
+}
+
+.projektit p {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+.projektit div {
+    /*border: 2px solid #5A3D7B;*/
+    overflow: auto;
+    width: 45%;
+    padding: 5px;
+    margin: 0 0 10px 0;
+    float:left;
+}
+
+.projektit div:hover {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    border-radius: 20px;
+}
+
+
+/*ALATUNNISTE*/
+
+.ylaalatunniste {
+    /*border: 2px solid red;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 50px;
+}
+
+/*.sivukartta, .yhteystiedot {
+    float: left;
+    border: 2px solid green;
+}*/
+
+/*
+.yhteystiedot {
+    padding-left: 10%;
+    padding-right: 5%;
+    margin: 0;
+    width: 35%;
+}
+
+.sivukartta {
+    padding-left: 10%;
+    padding-right: 5%;
+    margin: 0;
+    width: 35%;
+}*/
+
+.alatunniste h2 {
+    text-align: left;
+    color: #5A3D7B;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.alatunniste p, .alatunniste a {
+    font-size: 15px;
+    margin: 0;
+}
+
+.alatunniste a {
+    text-decoration: none;
+    display: block;
+    color: #000000;
+}
+
+.alatunniste a:last-of-type {
+    margin-bottom: 20px;
+}
+
+.alatunniste a:hover {
+    color:#BC97CA;
+}
+
+.alisivu {
+    padding-left: 10px;
+}
+
+.copyright{
+    font-size: 15px;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 15px;
+}
+
+
+/*MUKAUTTAMINEN ERIKOKOISILLE NÄYTÖILLE*/
+
+/*Vain banneri*/
+@media only screen and (min-width: 576px) {
+    /*body {
+      background-color: lightyellow;
+    }*/
+
+    .banneri h1 {
+        font-size: 50px;
+        padding-top: 120px;
+    }
+
+    .banneri h2 {
+        font-size: 20px;
+        padding-top: 5px;
+        padding-bottom: 180px;
+    }
+  }
+
+/*Tablet*/
+@media only screen and (min-width: 768px) { 
+    /*body {
+    background-color: lightgreen;
+    }*/
+
+    .banneri {
+        background-image: url("taustakuva.jpg");
+    }
+
+    .banneri h1 {
+        font-size: 70px;
+        padding-top: 150px;
+    }
+
+    .banneri h2 {
+        font-size: 30px;
+        padding-top: 10px;
+        padding-bottom: 250px;
+    }
+
+    .button button {
+        font-size: 20px;
+    }
+
+    .sisalto, .ylaprojekti {
+        width: 70%;
+    } 
+
+    .sisalto h2 {
+        margin-bottom: 10px;
+    }
+
+    .ylaalatunniste {
+        gap: 100px;
+    }
+  }
+
+/*Desktop*/
+@media only screen and (min-width: 1024px) {
+    /*body {
+      background-color: lightpink;
+    }*/
+
+    a {
+        text-decoration: none;
+    }
+
+    .banneri h1 {
+        font-size: 85px;
+        padding-top: 200px;
+    }
+
+    .banneri h2 {
+        font-size: 35px;
+        padding-top: 13px;
+        padding-bottom: 300px;
+    }
+
+    .button button {
+        font-size: 25px;
+    }
+
+    .sisalto h2 {
+        font-size: 30px;
+        margin: 55px 0 35px 0;
+        clear: both;
+    }
+
+    .sisalto img {
+        max-width: 40%;
+       /* display: flex;*/
+        float: left;
+        margin: 0 30px 40px 0;
+    }
+
+    .sisalto p {
+        /*clear:right;
+        max-width: 40%;
+        display: flex; 
+        float: right;*/
+        font-size: 22px;
+        padding: 0;
+        margin: 0 0 25px 0;
+    }
+
+    .sisalto p:last-of-type {
+        margin-bottom: 55px;
+    }
+
+    .projektit div {
+        width: 30%;
+        margin-bottom: 40px;
+    }
+
+    .projektit p {
+        font-size: 17px;
+    }
+
+    .alatunniste h2 {
+        font-size: 20px;
+    }
+    
+    .alatunniste p, .alatunniste a {
+        font-size: 17px;
+    }
+    
+    .ylaalatunniste {
+        gap: 200px;
+    }
+  }
+
+/*Vain banneri*/
+@media only screen and (min-width: 1920px) {
+    /*body {
+      background-color: lightblue;
+    }*/
+
+    .banneri h1 {
+        font-size: 100px;
+        padding-top: 280px;
+    }
+
+    .banneri h2 {
+        font-size: 50px;
+        padding-top: 25px;
+        padding-bottom: 420px;
+    }
+  }
