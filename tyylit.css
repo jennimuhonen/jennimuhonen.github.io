@@ -1,4 +1,4 @@
-/*Reunaviivat säätämisen avuksi
+/*Reunaviivat testaamisen avuksi
 
 img {       
     border: 1px;
@@ -12,11 +12,6 @@ p {
     border-style: solid;
 }*/
 
-/*HUOMIOT
-- muista poistaa kauheat taustavärit
-- muista siivota reunaviivatesti
-- muista siivota itseä varten tehdyt kommentit
-*/
 
 
 /*FONTIT JA KOKO SIVUN REUNAT*/
@@ -55,10 +50,10 @@ hr {
     background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("taustakuva_mobiili.jpg"); /*linear-gradient tummensi taustakuvaa*/
     background-color: #5A3D7B;
     background-position: bottom;        /*koska haluan, että jos jotain näkyy, niin alaosa*/
-    background-size: cover;             /*ONKO TÄMÄ IDEAALI, TOIMIIKO? Näyttää kansikuvan kokonaan leveyssuunnassa*/
+    background-size: cover;             /*Onko tämä ideaali? Näyttää kansikuvan kokonaan leveyssuunnassa*/
     /* Resize the background image to cover the entire container 
     background-repeat: no-repeat;
-    position: relative;     /* mitä tää tarkoittaa??? selvitä */
+    position: relative;     /* Ohjekoodissa olivat nämä kolme riviä. Jätän nämä talteen, jos törmään ongelmiin. */
 
 }
 
@@ -93,15 +88,15 @@ hr {
     margin: 0;
     display: flex;             /*Fiksaa pudotusvalikon tuottamat ongelmat*/
     justify-content: center;  /*Keskittää buttonit, kun flex heitti ne reunaan*/
-    /*align-items: center;      ei tee mitään???*/
+    /*align-items: center;      ei tee mitään? Jätän talteen varalta.*/
 }
 
 .button button {
     border: none;
     padding: 5px 13px;
-    /*text-align: center;                        Tämä ja kaksi alempaa ei tee mitään???
+    /*text-align: center;                        En huomaa, että tämä ja kaksi alempaa tekisivät mitään. Jätän varalta talteen.
     text-decoration: none;
-    display: inline-block;                    Tämän asettaa elementit vierekkäin ??? :) */
+    display: inline-block;                    Tämän asettaa elementit vierekkäin ? */
     font-size: 16px;
     margin: 8px 2px;
     border-radius: 7px;            
@@ -109,7 +104,7 @@ hr {
 
 .button button:hover {
     border: 2px solid black;
-    margin: 6px 0px;                /*Jotta buttonit eivät liikkuisi hoveroidessa eli korjaa borderin tuomat muutokset*/
+    margin: 6px 0px;                /*Jotta buttonit eivät liikkuisi hoveroidessa eli korjaa borderin tuomat muutokset. Näin ainakin jossain vaiheessa koodausta.*/
 }
 
 .taallaButton {
@@ -136,7 +131,7 @@ hr {
     display: inline-block;
 }
 
-/* Pudotusvalikko, yleensä piilossa, pöllitty verkosta */
+/* Pudotusvalikko, yleensä piilossa */
 .pudotusvalikko_sisalto {
     display: none;
     position: absolute;
@@ -246,7 +241,7 @@ hr {
 }
 
 .projektit div {
-    /*border: 2px solid #5A3D7B;*/
+    /*border: 2px solid #5A3D7B;*/ /* Testausta varten */
     overflow: auto;
     width: 45%;
     padding: 5px;
@@ -270,26 +265,6 @@ hr {
     align-items: start;
     gap: 50px;
 }
-
-/*.sivukartta, .yhteystiedot {
-    float: left;
-    border: 2px solid green;
-}*/
-
-/*
-.yhteystiedot {
-    padding-left: 10%;
-    padding-right: 5%;
-    margin: 0;
-    width: 35%;
-}
-
-.sivukartta {
-    padding-left: 10%;
-    padding-right: 5%;
-    margin: 0;
-    width: 35%;
-}*/
 
 .alatunniste h2 {
     text-align: left;
@@ -420,16 +395,11 @@ hr {
 
     .sisalto img {
         max-width: 40%;
-       /* display: flex;*/
         float: left;
         margin: 0 30px 40px 0;
     }
 
     .sisalto p {
-        /*clear:right;
-        max-width: 40%;
-        display: flex; 
-        float: right;*/
         font-size: 22px;
         padding: 0;
         margin: 0 0 25px 0;
